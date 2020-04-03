@@ -25,9 +25,7 @@ public class ClientEntityTest {
 	@Autowired
 	private ClientEntity myClient;
 	
-	@Before
-	public void setUp() throws Exception {
-	}
+	      
 
 	
 	@Test
@@ -36,7 +34,7 @@ public class ClientEntityTest {
 		try {
 			assertNotNull(myClient);
 			
-			logger.info(myClient);
+			
         assertEquals("Lovelybasy", myClient.getUsername());
         assertEquals("Bintu404",  myClient.getPassword());
         assertEquals("SHC2403", myClient.getRequests());
@@ -47,6 +45,9 @@ public class ClientEntityTest {
 		catch(Exception exe) {
 			exe.printStackTrace();
 		}
+		
+		
+		logger.info("it working");
     }
 
 
