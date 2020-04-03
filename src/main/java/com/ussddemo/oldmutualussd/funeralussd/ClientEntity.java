@@ -4,8 +4,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
+import com.ussddemo.oldmutualussd.configclass.JsonPropertySourceFactory;
+
+//@Component
+// @PropertySource(value = "classpath:funeralconfig.json",
+//factory = JsonPropertySourceFactory.class)
 @Component
-@PropertySource(value = "classpath:funeralconfig.json")
 @ConfigurationProperties
 public class ClientEntity {
 
