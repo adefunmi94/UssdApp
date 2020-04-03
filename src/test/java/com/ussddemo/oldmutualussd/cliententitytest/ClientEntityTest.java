@@ -2,6 +2,7 @@ package com.ussddemo.oldmutualussd.cliententitytest;
 
 import static org.junit.Assert.*;
 
+import org.jboss.logging.Logger;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,6 +19,8 @@ import com.ussddemo.oldmutualussd.funeralussd.ClientEntity;
   classes = UssdappApplication.class)
 public class ClientEntityTest {
 
+	private Logger logger = Logger.getLogger(getClass().getName());
+	
 	
 	@Autowired
 	private ClientEntity myClient;
@@ -31,9 +34,15 @@ public class ClientEntityTest {
     public void validateParametersTest() {
 		
 		try {
+			assertNotNull(myClient);
+			
+			logger.info(myClient);
         assertEquals("Lovelybasy", myClient.getUsername());
         assertEquals("Bintu404",  myClient.getPassword());
         assertEquals("SHC2403", myClient.getRequests());
+        
+        
+        
 		}
 		catch(Exception exe) {
 			exe.printStackTrace();
