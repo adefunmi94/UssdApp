@@ -1,10 +1,7 @@
 package com.ussddemo.oldmutualussd.funeralussd;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
-
-import com.ussddemo.oldmutualussd.configclass.JsonPropertySourceFactory;
 
 //@Component
 // @PropertySource(value = "classpath:funeralconfig.json",
@@ -20,6 +17,14 @@ public class ClientEntity {
 	
 	public ClientEntity() {
 		super();
+	}
+	
+
+	public ClientEntity(String username, String password, String requests) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.requests = requests;
 	}
 
 
