@@ -17,8 +17,6 @@ import com.ussddemo.oldmutualussd.UssdappApplication;
 import com.ussddemo.oldmutualussd.funeralussd.ClientEntity;
 
 @SpringBootTest
-@ContextConfiguration(
-  classes = UssdappApplication.class)
 public class ClientEntityTest {
 
 	private Logger logger = Logger.getLogger(getClass().getName());
@@ -34,7 +32,7 @@ public class ClientEntityTest {
     public void validateParametersTest() {
 		
 		try {
-//			assertNotNull(myClient);
+			assertNotNull(myClient);
 			
 			
         assertEquals("Lovelybasy", myClient.getUsername());
