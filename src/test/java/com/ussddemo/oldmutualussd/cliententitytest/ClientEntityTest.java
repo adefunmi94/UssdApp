@@ -28,6 +28,7 @@ public class ClientEntityTest {
 		
 		try {
 			assertNotNull(myClient);
+			System.out.println(myClient);
 			
 			
         assertEquals("Lovelybasy", myClient.getUsername());
