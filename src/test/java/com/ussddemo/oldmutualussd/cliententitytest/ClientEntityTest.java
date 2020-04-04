@@ -1,6 +1,8 @@
 package com.ussddemo.oldmutualussd.cliententitytest;
 
-import static org.junit.Assert.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.jboss.logging.Logger;
 import org.junit.Before;
