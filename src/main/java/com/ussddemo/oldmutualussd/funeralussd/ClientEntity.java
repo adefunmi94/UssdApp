@@ -1,13 +1,11 @@
 package com.ussddemo.oldmutualussd.funeralussd;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 //@Component
 // @PropertySource(value = "classpath:funeralconfig.json",
 //factory = JsonPropertySourceFactory.class)
-@Component
-@ConfigurationProperties
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ClientEntity {
 
 	private String username;
