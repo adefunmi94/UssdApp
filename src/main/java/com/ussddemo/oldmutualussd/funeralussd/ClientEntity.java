@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 // @PropertySource(value = "classpath:funeralconfig.json",
 //factory = JsonPropertySourceFactory.class)
 @Component
-@ConfigurationProperties
+@ConfigurationProperties(prefix = "info")
 public class ClientEntity {
 
 	private String username;
