@@ -2,6 +2,7 @@ package com.ussddemo.oldmutualussd.clientcontroller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,22 +23,18 @@ public class ClientFuneralController {
 	
 	
 	
-	@RequestMapping(value = "/",
-	        method = RequestMethod.GET)
-	@ResponseBody
+	@GetMapping("/")
     public ClientEntity getMyClient(){
 		
-		
-    
         return myClient;
 	
     }
 	
-	 @PostMapping("/client")
-	    public ClientEntity postMessage(@RequestBody ClientEntity theClient) {
+	 @PostMapping("/")
+	    public ClientEntity postMessaget() {
 			 
 		 
-	       return theClient;
+	       return myClient;
 	    }
 	
 }
